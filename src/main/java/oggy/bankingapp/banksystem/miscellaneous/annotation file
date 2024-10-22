@@ -1,0 +1,48 @@
+context variable in main file is nothing but spring IOC container(Application context type)
+we get bean with the help of context variable (Class class = context.getbean(Class_name.class))
+
+@Component   by applying this IOC spring container automatically create object
+@Autowired   we use this to fetch object from IOC container by using Construtor, setter and field injection
+@Qualifier   we use this when their is one type of two class then it define which one is used
+@Primary     this is alternate
+
+@Configuration this is used for java based configuration file
+@Bean          // // // // / // // // // // // / // / // // /
+
+
+@Controller
+@ResponseBody
+@RestController
+@RequestMapping("/api") for more uri(value = {"/core","/core1"})
+                        Attributes -> method = RequestMethod.GET
+                                      produce = MediaType......
+                                      consumes = MediaType.....
+
+@GetMapping
+@PostMapping, @RequestBody
+              To create http status we use @ResponseStatus or ResponseEntity<Type> class
+@Service
+@Repository
+@Lazy
+
+@Scope (singleton is used for one time object creation)(value = ConfigurableBean....SCOPE_SINGLETON  and it is bydefault)
+(prototype is used for create object every time)
+
+@Value     ("Default Value")this is used to assign the default value for the field or variable
+            we also define the value in application.properties file we fetch this by using
+            @Value (${Key})             (mail.host=host)
+            to get the value of environment variable we use (${jave.home})
+            and for system variable we use (${HOME})
+
+@PropertySource    we use this to provide property to spring environment and use @Value(${}) and Environment's getProperty method
+                   to read the properties from spring container
+
+                   We inject these by using @Configuration based class
+                   in this we do @PropertySource("classpath:mail.properties")
+                                 @PropertySources("classpath:message.properties")
+
+@PropertySources   we use this to add multiple property files
+                   @PropertySources({
+                            @PropertySource("classpath:mail.properties"),
+                            @PropertySources("classpath:message.properties")
+                   })

@@ -1,0 +1,6 @@
+What I want in my project
+1. there is like two entities i) Manager and ii) User
+2. User has Account which have some fields.
+3. We have composite key in this project
+4. We take DOB and this Dob calculate user Age
+5. Functionality of user is to transfer money from his acccount to another account
